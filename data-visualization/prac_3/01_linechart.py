@@ -2,7 +2,6 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 
-# Create sample DataFrame
 np.random.seed(42)
 x = np.linspace(0, 10, 50)
 df = pd.DataFrame({
@@ -15,7 +14,7 @@ df = pd.DataFrame({
     'Category': ['Sine Wave']*50 + ['Cosine Wave']*50 + ['Damped Sine']*50
 })
 
-# Create attractive line plot with Plotly Express
+
 fig = px.line(
     df,
     x='X',
@@ -28,7 +27,7 @@ fig = px.line(
     template='plotly_white'
 )
 
-# Customize the layout
+
 fig.update_layout(
     title_font=dict(size=24, family='Arial Black'),
     hovermode='x unified',
@@ -39,7 +38,7 @@ fig.update_layout(
     )
 )
 
-# Customize markers and lines
+
 fig.update_traces(
     marker=dict(size=10, line=dict(width=1, color='white')),
     line=dict(width=3)

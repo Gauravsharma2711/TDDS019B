@@ -1,7 +1,7 @@
 import plotly.express as px
 import pandas as pd
 
-# Monthly Revenue Data
+
 data = {
     'Month': ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     'Revenue': [25000, 28000, 32000, 29000, 35000, 38000]
@@ -9,18 +9,17 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Simple bar chart
 fig = px.bar(
     df,
     x='Month',
     y='Revenue',
     title='💰 Monthly Revenue 2025',
-    text='Revenue',  # Show values on bars
-    color='Revenue',  # Color based on value
-    color_continuous_scale='Viridis'  # Attractive color gradient
+    text='Revenue',  
+    color='Revenue',  
+    color_continuous_scale='Viridis'  
 )
 
-# Simple styling
+
 fig.update_layout(
     template='plotly_white',
     width=800,
