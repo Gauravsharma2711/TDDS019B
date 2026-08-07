@@ -14,4 +14,4 @@ def register (email: str , background_tasks : BackgroundTasks):
 
     return {
         'message' : 'Student registered successfully'
-    }git 
+    }
